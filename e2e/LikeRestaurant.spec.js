@@ -32,9 +32,8 @@ Scenario('Liking One Restaurant', ({ I }) => {
           I.seeElement('#likeButton');
 
           I.click('#likeButton');
-
-          titles.push(I.grabTextFrom('.card-title a'));
           pause();
+          titles.push(I.grabTextFrom('.nama-resto'));
 
           I.amOnPage('/');
 
