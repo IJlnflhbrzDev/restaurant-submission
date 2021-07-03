@@ -1,5 +1,9 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable import/no-extraneous-dependencies */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
 
 // SERVICE WORKER WEPACK PLUGIN
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
@@ -41,6 +45,17 @@ module.exports = {
     }),
     new ServiceWorkerWebpackPlugin({
       entry: path.resolve(__dirname, 'src/scripts/sw.js'),
+    }),
+    new ImageminWebpackPlugin({
+      config: [
+        {
+          test: /\.(jpe?g|png)/,
+          options: {
+            quality: 50
+          }
+        }
+      ],
+      overrideExtension: true,
     }),
   ],
 };
