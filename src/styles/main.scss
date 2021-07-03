@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+// Color Themse
+@import './color-themes', './_aksesibilitas', './navbar', './header',
+  './responsive-page', './footer';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  // aksesiilitas focuss tab elements
+  &:focus {
+    border: 7px dotted gold !important;
+  }
+}
+
+html,
+body {
+  background-color: $black;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+main {
+  padding: 30px 50px;
+
+  h2 {
+    color: $white;
+    position: absolute;
+    top: -59px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+    background-color: black;
+  }
+  .conten {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    margin-top: 50px;
+
+    article {
+      height: max-content;
+      .card {
+        background-color: $black;
+        border: 1px solid white;
+        color: #797983;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border-radius: 0.25rem;
+        max-width: 500px;
+        overflow: hidden;
+
+        &:focus {
+          border: 7px dotted gold !important;
+        }
+        &-img {
+          width: 100%;
+          background-position: center;
+          background-size: cover;
+          min-height: 230px;
+          &:focus {
+            border: 7px dotted gold !important;
+          }
+        }
+
+        &-lokasi {
+          position: absolute;
+          padding: 8px 10px;
+          background-color: #19182c;
+          color: #fff;
+          letter-spacing: 1px;
+          top: 20px;
+          left: 0;
+          width: max-content;
+          border-top-right-radius: 0.25rem;
+
+          h3 {
+            font-size: 14px;
+          }
+        }
+
+        &-body {
+          padding: 0.7rem;
+          h4 {
+            margin-bottom: 6px;
+            font-size: 15px;
+            color: $gold;
+            font-weight: 300;
+            letter-spacing: 1px;
+            font-style: italic;
+          }
+          h5 {
+            a {
+              display: inline-block;
+              line-height: 44px;
+              font-size: 17px;
+              margin-bottom: 7px;
+              color: $white;
+              text-decoration: none;
+            }
+          }
+
+          p {
+            overflow: hidden;
+            max-width: 100%;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+          }
+          .btn_detail {
+            display: inline-block;
+            min-width: 44px;
+            min-height: 44px;
+            background-color: gold;
+            line-height: 44px;
+            text-decoration: none;
+            padding: 0 2em;
+            border-radius: 20px;
+            margin-top: 10px;
+
+            &:hover {
+              background-color: blue;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+
+  HALAMAN DETAIL
+
+*/
+
+.detail-page {
+  position: relative;
+  width: 100%;
+  height: max-content;
+  color: grey;
+
+  article {
+    padding: 10px;
+    background-color: rgba(167, 111, 111, 0.219);
+    border-radius: 20px;
+    img {
+      width: 100%;
+      object-fit: fill;
+      max-height: 450px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    .nama-resto {
+      font-size: 20px;
+      color: goldenrod;
+    }
+    h4 {
+      margin-top: 10px;
+    }
+
+    h5 {
+      margin-bottom: 10px;
+    }
+
+    h6 {
+      font-size: 15px;
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/*
+
+ICON LIKE
+
+*/
+
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

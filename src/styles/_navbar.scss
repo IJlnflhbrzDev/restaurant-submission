@@ -1,0 +1,42 @@
+/*
+     Navbar Restaurant
+*/
+.nav {
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $navbar-color;
+    padding: 20px 15px;
+  }
+  &-brand {
+    font-family: 'Satisfy', cursive;
+    letter-spacing: 2px;
+    color: $white;
+    font-size: 30px;
+  }
+  &-menu {
+    display: inline-flex;
+    li {
+      list-style-type: none;
+      a {
+        display: block;
+        min-width: 44px;
+        min-height: 44px;
+        line-height: 44px;
+        padding: 0 1em;
+        font-size: larger;
+        text-decoration: none;
+        color: $white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  #nav-drawwer {
+    display: none;
+  }
+}

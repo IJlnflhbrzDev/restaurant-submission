@@ -1,0 +1,51 @@
+@media screen and (max-width: 768px) {
+  /*
+    Navbar top
+  */
+  nav.nav-container {
+    padding: 10px 15px;
+    position: relative;
+    .nav-brand {
+      font-size: 25px !important;
+    }
+    .nav-menu {
+      transform: scaleY(0);
+      position: absolute;
+      background-color: inherit;
+      left: 0;
+      transition: all 0.55s ease;
+    }
+
+    #nav-drawwer {
+      display: block;
+      font-size: 33px;
+      width: 44px;
+      color: $white;
+      cursor: pointer;
+    }
+    .show-menu-mobile {
+      display: inline-block;
+      transform: scaleY(1);
+      line-height: 40px;
+      top: 56px;
+      width: 80%;
+      height: inherit;
+      z-index: 2;
+      transition: all 0.7s ease-in-out;
+      li {
+        &:hover {
+          background-color: $white;
+
+          a {
+            color: $black;
+          }
+        }
+        a {
+          font-size: 17px;
+          box-sizing: border-box;
+          padding: 0 0.5em;
+        }
+      }
+    }
+  }
+}
