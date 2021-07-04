@@ -1,5 +1,5 @@
 {
-  "name": "restaurant-appsV2",
+  "name": "restaurant-appsv2",
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,8 @@
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
     "fix": "npx eslint ./src --fix",
-    "e2e": "codeceptjs run --steps"
+    "e2e": "codeceptjs run --steps",
+    "build-image": "node sharp.js"
   },
   "keywords": [],
   "author": "IJlal Naufal Hibrizi => ijlnflhbrz@gmail.com",
