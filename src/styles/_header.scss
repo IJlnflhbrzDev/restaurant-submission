@@ -3,14 +3,16 @@
 */
 .header {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/src/public/images/heros/large-jumtoron.png');
+  background-image: url('/images/heros/small-jumtoron.jpg');
   background-position: center;
   background-size: cover;
   object-fit: cover;
+
+
 
   &-heading {
     position: absolute;

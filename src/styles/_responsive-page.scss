@@ -48,17 +48,7 @@
       }
     }
   }
-  /*
-    Header Jumbotron
-  */
-  .header {
-    background-image: url('/src/public/images/heros/medium-jumtoron.png');
-  }
-}
-
-@media screen and (max-width: 552px) {
-.header {
-    background-image: url('/src/public/images/heros/small-jumtoron.png');
-  }
 
 }
+
+
