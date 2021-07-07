@@ -1,3 +1,5 @@
+/* eslint-disable prefer-destructuring */
+/* eslint-disable import/no-unresolved */
 /* eslint-disable no-unused-vars */
 /* eslint-disable comma-dangle */
 /* eslint-disable import/no-extraneous-dependencies */
@@ -5,6 +7,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 
 // SERVICE WORKER WEPACK PLUGIN
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
@@ -36,6 +40,7 @@ module.exports = {
       template: path.resolve(__dirname, 'src/templates/index.html'),
       filename: 'index.html',
     }),
+    new BundleAnalyzerPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         {
