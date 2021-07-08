@@ -79,7 +79,7 @@ module.exports = {
     new ImageminWebpackPlugin({
       plugins: [
         ImageminMozjpeg({
-          quality: 50,
+          quality: 100,
           progressive: true,
         }),
       ],
