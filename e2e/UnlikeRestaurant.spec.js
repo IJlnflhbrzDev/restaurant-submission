@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable no-await-in-loop */
 /* eslint-disable no-plusplus */
 /* eslint-disable padded-blocks */
@@ -22,26 +23,26 @@ Scenario('Liking One Restaurant', ({ I }) => {
 
 
      I.amOnPage('/');
-     pause();
      I.seeElement('.card-title a ');
 
-     const titles = [];
-     for (let i = 1; i <= 3; i++) {
-          // eslint-disable-next-line no-trailing-spaces
-          I.click(locate('.card-title a').at(i));
 
-          I.seeElement('#likeButton');
 
-          I.click('#likeButton');
-          titles.push(I.grabTextFrom('.nama-resto'));
+     // eslint-disable-next-line no-trailing-spaces
+     I.click(locate('.card-title a'));
 
-          I.amOnPage('/');
+     I.seeElement('#likeButton');
 
-     }
+     I.click('#likeButton');
 
      I.amOnPage('/#/favorite');
-     I.seeElement('article');
 
 
+     I.seeElement('.card-title a');
+     I.click('.card-title a');
+
+     I.seeElement('#likeButton');
+     I.click('#likeButton');
+
+     I.amOnPage('/');
 
 });
