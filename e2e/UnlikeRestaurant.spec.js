@@ -11,15 +11,15 @@
 /* eslint-disable no-undef */
 // const assert = require('assert');
 
-Feature('Liking Restaurant');
+Feature('unlike Restaurant');
 
 Before(({ I }) => {
      I.amOnPage('/#/favorite');
 });
 
 
-Scenario('Liking One Restaurant', ({ I }) => {
-     I.see('You like Favorite Resto', ' .content__heading');
+Scenario('unlike One Restaurant', ({ I }) => {
+     I.see('You unlike Favorite Resto', ' .content__heading');
 
 
      I.amOnPage('/');
