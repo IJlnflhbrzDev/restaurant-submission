@@ -11,20 +11,20 @@
 /* eslint-disable no-undef */
 // const assert = require('assert');
 
-Feature('unlike Restaurant');
+Feature('Unlike Restaurant');
 
 Before(({ I }) => {
      I.amOnPage('/#/favorite');
 });
 
 
-Scenario('unlike One Restaurant', ({ I }) => {
-     I.see('You unlike Favorite Resto', ' .content__heading');
+Scenario('Liking One Restaurant', ({ I }) => {
 
+     I.see('You like Favorite Resto', ' .content__heading');
 
+     pause();
      I.amOnPage('/');
      I.seeElement('.card-title a ');
-
 
 
      // eslint-disable-next-line no-trailing-spaces
@@ -43,6 +43,6 @@ Scenario('unlike One Restaurant', ({ I }) => {
      I.seeElement('#likeButton');
      I.click('#likeButton');
 
-     I.amOnPage('/');
+     I.amOnPage('/#/favorite');
 
 });
