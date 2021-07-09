@@ -1,3 +1,9 @@
+/* eslint-disable no-empty */
+/* eslint-disable consistent-return */
+/* eslint-disable no-else-return */
+/* eslint-disable quotes */
+/* eslint-disable padded-blocks */
+/* eslint-disable eqeqeq */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
@@ -13,6 +19,10 @@ const favoriteResto = {
 
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getAllResto();
+    if (restaurants == '') {
+      document.querySelector('.content__heading').innerHTML = 'Tidak Ada Restaurant yg kamu sukai ! ';
+    }
+
     const restaurantContainer = document.querySelector('.conten');
     restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += restoTemplate(restaurant);

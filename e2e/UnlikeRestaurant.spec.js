@@ -1,3 +1,7 @@
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable no-else-return */
+/* eslint-disable no-useless-return */
+/* eslint-disable eqeqeq */
 /* eslint-disable no-alert */
 /* eslint-disable no-await-in-loop */
 /* eslint-disable no-plusplus */
@@ -18,11 +22,12 @@ Before(({ I }) => {
 });
 
 
-Scenario('Liking One Restaurant', ({ I }) => {
+Scenario('Unlike  Restaurant', ({ I }) => {
 
-     I.see('You like Favorite Resto', ' .content__heading');
-
+     I.see('Tidak Ada Restaurant yg kamu sukai !', ' .content__heading');
      pause();
+
+
      I.amOnPage('/');
      I.seeElement('.card-title a ');
 
@@ -31,11 +36,10 @@ Scenario('Liking One Restaurant', ({ I }) => {
      I.click(locate('.card-title a'));
 
      I.seeElement('#likeButton');
-
      I.click('#likeButton');
 
      I.amOnPage('/#/favorite');
-
+     pause();
 
      I.seeElement('.card-title a');
      I.click('.card-title a');
@@ -45,4 +49,5 @@ Scenario('Liking One Restaurant', ({ I }) => {
 
      I.amOnPage('/#/favorite');
 
+     I.see('Tidak Ada Restaurant yg kamu sukai !', ' .content__heading');
 });

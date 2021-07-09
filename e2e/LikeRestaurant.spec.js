@@ -8,7 +8,7 @@
 // /* eslint-disable indent */
 // /* eslint-disable no-unused-vars */
 // /* eslint-disable no-undef */
-// // const assert = require('assert');
+// const assert = require('assert');
 
 // Feature('Liking Restaurant');
 
@@ -20,12 +20,10 @@
 // Scenario('Liking One Restaurant', ({ I }) => {
 //      I.see('You like Favorite Resto', ' .content__heading');
 
-
 //      I.amOnPage('/');
-//      pause();
 //      I.seeElement('.card-title a ');
-
-//      const titles = [];
+//      const firstResto = locate('.card-title a ').first();
+//      const firstRestoTitle = [];
 //      for (let i = 1; i <= 3; i++) {
 //           // eslint-disable-next-line no-trailing-spaces
 //           I.click(locate('.card-title a').at(i));
@@ -33,9 +31,10 @@
 //           I.seeElement('#likeButton');
 
 //           I.click('#likeButton');
-//           titles.push(I.grabTextFrom('.nama-resto'));
+//           firstRestoTitle.push(I.grabTextFrom('.nama-resto'));
 
 //           I.amOnPage('/');
+
 
 //      }
 
@@ -43,5 +42,5 @@
 //      I.seeElement('article');
 
 
-
+//      assert.strictEqual(firstResto, firstRestoTitle);
 // });
