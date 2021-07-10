@@ -28,6 +28,7 @@ Scenario('Liking Three Restaurants', async ({ I }) => {
           I.click(locate('.card-title a').at(i));
 
           I.seeElement('#likeButton');
+          firstRestoTitle.push(I.grabTextFrom('.nama-resto'));
 
           I.click('#likeButton');
 
