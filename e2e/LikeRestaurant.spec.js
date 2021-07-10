@@ -18,7 +18,7 @@ Before(({ I }) => {
 
 
 Scenario('Liking Three Restaurants', async ({ I }) => {
-     I.see('You like Favorite Resto', ' .content__heading');
+
 
      I.amOnPage('/');
      I.seeElement('.card-title a ');
