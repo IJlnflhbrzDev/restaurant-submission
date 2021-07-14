@@ -25,7 +25,7 @@ Before(({ I }) => {
 Scenario('Unlike  Restaurant', ({ I }) => {
 
      I.see('Tidak Ada Restaurant yg kamu sukai !', ' .content__heading');
-     pause();
+
 
 
      I.amOnPage('/');
@@ -39,7 +39,7 @@ Scenario('Unlike  Restaurant', ({ I }) => {
      I.click('#likeButton');
 
      I.amOnPage('/#/favorite');
-     pause();
+
 
      I.seeElement('.card-title a');
      I.click('.card-title a');

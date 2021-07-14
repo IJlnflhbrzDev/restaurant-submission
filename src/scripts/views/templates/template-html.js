@@ -7,20 +7,18 @@
 import CONFIG from '../../globals/config';
 
 const restoTemplate = (resto) => {
-  return `
+     return `
      <article>
                     <div class="card">
-                         <img src=${CONFIG.SMALL_IMAGE_URL(
-    resto.pictureId
-  )}  class="card-img lazyload" alt=${resto.name}>
+                         <img  data-src="${CONFIG.SMALL_IMAGE_URL(resto.pictureId)}" class="card-img lazyload"  alt=${resto.name}>
                          <div class="card-lokasi">
                               <h3>Kota,${resto.city}</h3>
                          </div>
                          <div class="card-body">
                               <h4 class="card-rating">Rating ${resto.rating
-    }</h4>
+          }</h4>
                               <h5 class="card-title"><a href="${`/#/detail/${resto.id}`}" aria-label="nama restoran click jika anda ingin melihat lebih detail ">${resto.name
-    }</a></h5>
+          }</a></h5>
                               <p class="card-text">${resto.description}</p>
                               <a class="btn_detail" href="${`/#/detail/${resto.id}`}" aria-label="click untuk melihat detail makanan">Detail</a>
                          </div>
@@ -31,7 +29,7 @@ const restoTemplate = (resto) => {
 };
 
 const RestoDetailTemplate = (resto) => {
-  return `
+     return `
 
      <article class="detail">
           <img src=${CONFIG.SMALL_IMAGE_URL(resto.pictureId)}
@@ -51,22 +49,22 @@ const RestoDetailTemplate = (resto) => {
                <div class="categories">
                     <h6>Kategori Restaurant</h6>
                     <p>${resto.categories
-      .map((item) => item.name)
-      .join(' - ')}</p>
+               .map((item) => item.name)
+               .join(' - ')}</p>
                </div>
 
                <div class="menu-food">
                          <h6>Menu Makanan</h6>
                          <p>${resto.menus.foods
-      .map((item) => item.name)
-      .join(', ')}</p>
+               .map((item) => item.name)
+               .join(', ')}</p>
                </div>
 
                <div class="menu-drinks">
                          <h6>Menu Minuman</h6>
                          <p>${resto.menus.drinks
-      .map((item) => `<small>${item.name}</small>`)
-      .join(', ')}</p>
+               .map((item) => `<small>${item.name}</small>`)
+               .join(', ')}</p>
                </div>
 
                <div class="description">
@@ -77,12 +75,12 @@ const RestoDetailTemplate = (resto) => {
                <div class="customerReviews">
                <h6>Customer Reviews</h6>
                     ${resto.customerReviews.map((customer) => {
-        return `
+                    return `
                               <h6>${customer.name}</h6>
                               <small>${customer.review}</small>
                               <p>${customer.date}</p>
                          `;
-      })}
+               })}
                </div>
            </div>
      </article>
@@ -103,8 +101,8 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 export {
-  restoTemplate,
-  RestoDetailTemplate,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+     restoTemplate,
+     RestoDetailTemplate,
+     createLikeButtonTemplate,
+     createLikedButtonTemplate,
 };
